@@ -6,7 +6,7 @@ var bot = new Discord.Client();
 
 // Events.
 bot.on("ready", function() {
-    bot.user.setActivity('s!help | Sodaria', { type: 'STREAMING' });
+    bot.user.setActivity('a!help | Arthania', { type: 'STREAMING' });
     console.log(`${bot.user.username} est Prêt!`);
 });
 
@@ -29,13 +29,13 @@ bot.on("message", function(message) {
             .addField(" - ping", "PING PONG.")
             .addField(" - ip", "Affiche l'IP et me Port du serveur.")
             .setColor(0x00FFEE)
-            .setFooter("Ⓒ 2019 Sodaria.", bot.user.displayAvatarURL);
+            .setFooter("Ⓒ 2019 Arthania.", bot.user.displayAvatarURL);
         var embedhelpadmin = new Discord.RichEmbed()
             .setAuthor("💬 Commandes de Modération.")
             .addField(" - clear", "Clear jusqu'à **99** Messages.")
             .addField(" - kick", "Expulser un membre du serveur.")
             .setColor(0x00FFEE)
-            .setFooter("Ⓒ 2019 Sodaria.", bot.user.displayAvatarURL);
+            .setFooter("Ⓒ 2019 Arthania.", bot.user.displayAvatarURL);
             message.channel.send(embedhelpmember);
             message.channel.send(embedhelpadmin);
     };
@@ -44,7 +44,7 @@ bot.on("message", function(message) {
 
         var embedserverip = new Discord.RichEmbed()
 
-            .setAuthor("Sodaria")
+            .setAuthor(">>Arthania<<")
 
             .addField("📡IP:", "Soon...")
 
@@ -52,11 +52,11 @@ bot.on("message", function(message) {
         
             .addField("🔧Statut:", "En Maintenance")
         
-            .addField("🌴Vote:", "https://minecraftpocket-servers.com/server/90902/vote/")
+            .addField("🌴Vote:", "Soon...")
 
             .setColor(0x00FFEE)
 
-            .setFooter("Ⓒ 2019 Sodaria.", bot.user.displayAvatarURL);
+            .setFooter("Ⓒ 2019 Arthania.", bot.user.displayAvatarURL);
 
         
             message.channel.send(embedserverip);
