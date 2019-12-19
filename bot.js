@@ -50,9 +50,9 @@ bot.on("message", function(message) {
 
             .addField("🛰️Port:", "Soon...")
         
-            .addField("🔧Statut", "En Maintenance")
+            .addField("🔧Statut:", "En Maintenance")
         
-            .addField("🌴Vote", "https://minecraftpocket-servers.com/server/90902/vote/")
+            .addField("🌴Vote:", "https://minecraftpocket-servers.com/server/90902/vote/")
 
             .setColor(0x00FFEE)
 
