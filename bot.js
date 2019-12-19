@@ -44,13 +44,15 @@ bot.on("message", function(message) {
 
         var embedserverip = new Discord.RichEmbed()
 
-            .setAuthor("🖥️ IP du serveur.")
+            .setAuthor("Sodaria")
 
-            .addField("IP:", "Soon...")
+            .addField("📡IP:", "Soon...")
 
-            .addField("Port:", "Soon...")
+            .addField("🛰️Port:", "Soon...")
         
-            .addField("Status:", "En cours de Dev")
+            .addField("🔧Statut", "En Maintenance")
+        
+            .addField("🌴Vote", "https://minecraftpocket-servers.com/server/90902/vote/")
 
             .setColor(0x00FFEE)
 
