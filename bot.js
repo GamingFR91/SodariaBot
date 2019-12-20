@@ -39,11 +39,8 @@ bot.on("message", function(message) {
             message.channel.send(embedhelpmember);
             message.channel.send(embedhelpadmin);
     };
-    const mcpe = client.emojis.get("657609657216401408");
-    const mcpe = client.emojis.find(emoji => emoji.name === "mcpe");
-
+   
     if (command == "ip") {
-        const minecraftpe = client.emojis.find(emoji => emoji.name === "minecraftpe");
         var embedserverip = new Discord.RichEmbed()
 
             .setAuthor(">>Arthania<<")
