@@ -39,8 +39,8 @@ bot.on("message", function(message) {
             message.channel.send(embedhelpmember);
             message.channel.send(embedhelpadmin);
     };
-    const minecraftpe = client.emojis.get("656810065843716106");
-    const minecraftpe = client.emojis.find(emoji => emoji.name === "pe");
+    const mcpe = client.emojis.get("657609657216401408");
+    const mcpe = client.emojis.find(emoji => emoji.name === "mcpe");
 
     if (command == "ip") {
         const minecraftpe = client.emojis.find(emoji => emoji.name === "minecraftpe");
@@ -52,7 +52,7 @@ bot.on("message", function(message) {
 
             .addField("🛰️Port:", "Soon...")
         
-            .addField("${minecraftpe}Minecraft", "1.14.0")
+            .addField("${mcpe}Minecraft", "1.14.0")
         
             .addField("🔧Statut:", "En Maintenance")
         
