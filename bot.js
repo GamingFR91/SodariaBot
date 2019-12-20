@@ -39,9 +39,11 @@ bot.on("message", function(message) {
             message.channel.send(embedhelpmember);
             message.channel.send(embedhelpadmin);
     };
-   
-    if (command == "ip") {
+    const minecraftpe = client.emojis.get("656810065843716106");
+    const minecraftpe = client.emojis.find(emoji => emoji.name === "pe");
 
+    if (command == "ip") {
+        const minecraftpe = client.emojis.find(emoji => emoji.name === "minecraftpe");
         var embedserverip = new Discord.RichEmbed()
 
             .setAuthor(">>Arthania<<")
@@ -49,6 +51,8 @@ bot.on("message", function(message) {
             .addField("📡IP:", "Soon...")
 
             .addField("🛰️Port:", "Soon...")
+        
+            .addField("${minecraftpe}Minecraft", "1.14.0")
         
             .addField("🔧Statut:", "En Maintenance")
         
