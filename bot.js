@@ -49,7 +49,7 @@ bot.on("message", function(message) {
 
             .addField("🛰️Port:", "Soon...")
         
-            .addField("${mcpe}Minecraft", "1.14.0")
+            .addField("<:mcpe:657609657216401408>Minecraft", "1.14.0")
         
             .addField("🔧Statut:", "En Maintenance")
         
