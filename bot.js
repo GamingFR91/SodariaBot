@@ -6,6 +6,7 @@ var bot = new Discord.Client();
 
 // Events.
 bot.on("ready", function() {
+            let rotate = 0
             setInterval(function(){
     
                 if(rotate === 0){
