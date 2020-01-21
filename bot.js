@@ -5,8 +5,7 @@ const PREFIX = process.env.PREFIX;
 var bot = new Discord.Client();
 
 // Events.
-client.on('ready', () => {
- 
+bot.on("ready", function() {
             setInterval(function(){
     
                 if(rotate === 0){
@@ -26,9 +25,8 @@ client.on('ready', () => {
                 }
     
             }, 10 * 1000);
-        } 
+        
     });
-});
 
 bot.on('guildMemberAdd', member => {
     member.guild.channels.get('616221793467891724').send('**' + member.user.username + '**, a rejoint le serveur'); 
