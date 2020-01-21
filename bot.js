@@ -6,12 +6,28 @@ var bot = new Discord.Client();
 
 // Events.
 client.on('ready', () => {
-    setInterval(async ()=>{
-        let {data: blocks} = await axios.get('https://chain.ragnaproject.io/api/getblockcount').catch(console.log)
-        let textList = ['Hello World','Lorem Ipsum','Discord Bots', 'Blocks: ' + blocks]
-        var text = textList[Math.floor(Math.random() * textList.length)];
-        client.user.setActivity(text , { type: 'WATCHING' })
-    },60000) // milliseconds
+ 
+            setInterval(function(){
+    
+                if(rotate === 0){
+                    client.user.setActivity('Nenorium | Network MCPE', {type: "Streaming", url: 'https://www.twitch.tv/discordapp'});
+                    rotate = 1;       
+                }
+    
+                else if(rotate === 1){
+                    client.user.setActivity('nenorium.tk | 💎', {type: "Streaming", url: 'https://www.twitch.tv/discordapp'});
+                    rotate = 2;
+                }
+    
+                else if(rotate === 2){
+                    client.user.setActivity(message.guild.memberCount + " utilisateurs sur notre discord !", {type: "Streaming", url: 'https://www.twitch.tv/discordapp'});
+                    rotate = 0;
+                    
+                }
+    
+            }, 10 * 1000);
+        } 
+    });
 });
 
 bot.on('guildMemberAdd', member => {
