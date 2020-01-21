@@ -5,9 +5,13 @@ const PREFIX = process.env.PREFIX;
 var bot = new Discord.Client();
 
 // Events.
-bot.on("ready", function() {
-    bot.user.setActivity('a!help | Arthania', { type: 'STREAMING' });
-    console.log(`${bot.user.username} est Prêt!`);
+client.on('ready', () => {
+    setInterval(async ()=>{
+        let {data: blocks} = await axios.get('https://chain.ragnaproject.io/api/getblockcount').catch(console.log)
+        let textList = ['Hello World','Lorem Ipsum','Discord Bots', 'Blocks: ' + blocks]
+        var text = textList[Math.floor(Math.random() * textList.length)];
+        client.user.setActivity(text , { type: 'WATCHING' })
+    },60000) // milliseconds
 });
 
 bot.on('guildMemberAdd', member => {
