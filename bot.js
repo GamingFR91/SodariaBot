@@ -37,13 +37,13 @@ bot.on("message", function(message) {
             .addField(" - avatar", "Affiche ton avatar(non fonctionnel pour l'instant).")
             .addField(" - ping", "PING PONG.")
             .addField(" - ip", "Affiche l'IP et le Port du serveur.")
-            .setColor(0x00FFEE)
+            .setColor(0xFF0011)
             .setFooter("Ⓒ 2019 Arthania.", bot.user.displayAvatarURL);
         var embedhelpadmin = new Discord.RichEmbed()
             .setAuthor("💬 Commandes de Modération.")
             .addField(" - clear", "Clear jusqu'à **99** Messages.")
             .addField(" - kick", "Expulser un membre du serveur.")
-            .setColor(0x00FFEE)
+            .setColor(0xFF0011)
             .setFooter("Ⓒ 2019 Arthania.", bot.user.displayAvatarURL);
             message.channel.send(embedhelpmember);
             message.channel.send(embedhelpadmin);
@@ -64,7 +64,7 @@ bot.on("message", function(message) {
         
             .addField("🌴Vote:", "Soon...")
 
-            .setColor(0x00FFEE)
+            .setColor(0xFF0011)
 
             .setFooter("Ⓒ 2019 Arthania.", bot.user.displayAvatarURL);
 
@@ -79,11 +79,11 @@ bot.on("message", function(message) {
         let member = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
         message.channel.send({
                embed: {
-                  title: `Avatar de ${member.user.nickname} `,
+                  title: `Avatar de ${member.user.username} `,
                   image: {
                       url: member.user.displayAvatarURL
                   },
-                  color: 0x00FFEE
+                  color: 0xFF0011
                }
         })
     };
@@ -113,7 +113,7 @@ bot.on("message", function(message) {
     
         let kickEmbed = new Discord.RichEmbed()
         .setDescription("**👢 Kicked**")
-        .setColor(0x00FFEE)
+        .setColor(0xFF0011)
         .addField("Personne", `${kUser}`)
         .addField("Modérateur", `<@${message.author.id}>`)
         .addField("Raison", `**\`\`\`${kReason}\`\`\`**`);
