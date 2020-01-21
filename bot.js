@@ -10,6 +10,15 @@ bot.on("ready", function() {
     console.log(`${bot.user.username} est Prêt!`);
 });
 
+bot.on('guildMemberAdd', member => {
+    member.guild.channels.get('channelID').send('**' + member.user.username + '**, has joined the server!'); 
+});
+
+bot.on('guildMemberRemove', member => {
+    member.guild.channels.get('channelID').send('**' + member.user.username + '**, has left the server');
+    //
+});
+
 bot.on("message", function(message) {
 
     if (message.author.bot) return;
