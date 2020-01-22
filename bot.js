@@ -27,7 +27,8 @@ bot.on("ready", function() {
     
             }, 10 * 1000);
         
-    });
+    
+
 
 bot.on('guildMemberAdd', member => {
     member.guild.channels.get('616221793467891724').send('**' + member.user.username + '**, a rejoint le serveur'); 
