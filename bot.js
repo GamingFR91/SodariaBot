@@ -34,6 +34,13 @@ bot.on("message", function(message) {
     var command = args[0].toLowerCase();
 
 // Commands.
+    
+    if(command === "members") {
+
+message.channel.send(`This server has ${guild.memberCount} members!`);
+
+}
+    
     if (command == "help") {
         var embedhelpmember = new Discord.RichEmbed()
             .setAuthor("💬 Liste des Commandes.")
