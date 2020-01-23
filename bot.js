@@ -6,7 +6,7 @@ var bot = new Discord.Client();
 
 // Events.
 bot.on("ready",function() {
-    bot.user.setActivity('a!help | ' + message.guild.get('616221793467891722').memberCount + "membres", { type: 'STREAMING' });
+    bot.user.setActivity('a!help | ' + message.guild.memberCount + "membres", { type: 'STREAMING' });
     console.log(`${bot.user.username} est Prêt!`);
 });
         
