@@ -5,8 +5,8 @@ const PREFIX = process.env.PREFIX;
 var bot = new Discord.Client();
 
 // Events.
-bot.on("ready",function() {
-    bot.user.setActivity('a!help | ${message.guild.memberCount} membres", { type: 'STREAMING' });
+bot.on("ready", function() {
+    bot.user.setActivity('d!help | Draconium', { type: 'STREAMING' });
     console.log(`${bot.user.username} est Prêt!`);
 });
         
