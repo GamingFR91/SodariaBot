@@ -5,9 +5,28 @@ const PREFIX = process.env.PREFIX;
 var bot = new Discord.Client();
 
 // Events.
-bot.on("ready", function() {
-    bot.user.setActivity('a!help | Arthania', { type: 'STREAMING' });
-    console.log(`${bot.user.username} est Prêt!`);
+bot.on("ready", let rotate = 0;
+            setInterval(function(){
+    
+                if(rotate === 0){
+                    client.user.setActivity('Nenorium | Network MCPE', {type: "Streaming", url: 'https://www.twitch.tv/discordapp'});
+                    rotate = 1;       
+                }
+    
+                else if(rotate === 1){
+                    client.user.setActivity('nenorium.tk | 💎', {type: "Streaming", url: 'https://www.twitch.tv/discordapp'});
+                    rotate = 2;
+                }
+    
+                else if(rotate === 2){
+                    client.user.setActivity(message.guild.memberCount + " utilisateurs sur notre discord !", {type: "Streaming", url: 'https://www.twitch.tv/discordapp'});
+                    rotate = 0;
+                    
+                }
+    
+            }, 1000);
+        } 
+   
 });
         
     
