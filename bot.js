@@ -79,7 +79,7 @@ bot.on("message", function(message) {
     };
 
     if (command == "avatar") {
-        if(args[0] === null) return(args[0] === <@${message.autor.id}>);
+        if(args[0] === null) return(args[0] === "<@${message.autor.id}>");
         let member = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
         message.channel.send({
                embed: {
