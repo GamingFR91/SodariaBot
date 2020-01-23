@@ -25,7 +25,7 @@ bot.on("ready", let rotate = 0;
                 }
     
             }, 1000);
-        } 
+        
    
 });
         
