@@ -5,7 +5,7 @@ const PREFIX = process.env.PREFIX;
 var bot = new Discord.Client();
 
 // Events.
-bot.on("ready", let rotate = 0;
+bot.on("ready",
             setInterval(function(){
     
                 if(rotate === 0){
