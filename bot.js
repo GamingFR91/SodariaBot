@@ -37,7 +37,7 @@ bot.on("message", function(message) {
     
     if(command === "members") {
 
-message.channel.send('This server has ${guild.memberCount} members!');
+message.reply('This server has ${guild.memberCount} members!');
 
 }
     
