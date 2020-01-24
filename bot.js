@@ -10,7 +10,7 @@ bot.on("ready", function() {
     console.log(`${bot.user.username} est Prêt!`);
 });
         
-const guild = guilds.get('616221793467891722');
+const guild = bot.guilds.get('616221793467891722');
 
 
 bot.on('guildMemberAdd', member => {
