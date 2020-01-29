@@ -45,10 +45,61 @@ bot.on("message", function(message) {
 // Commands.
     
     if(command === "members") {
+let guild = message.guild
 
-message.reply('This server has ${guild.memberCount} members!');
+        let channel = message.channel
 
-}
+        let guildicon = guild.icon_url
+
+        let members = guild.memberCount
+
+        let bots = guild.members.filter(m => m.user.bot).size
+
+        let humans = members - bots
+
+        let allchannels = guild.channels.size
+
+        let textchannels = guild.channels.filter(e => e.type === "text")
+
+        let voicechannels = guild.channels.filter(e => e.type === "voice")
+
+          var embed = new Discord.RichEmbed()
+
+          .setColor("#000000")
+
+          .setTitle(`Informations du Serveur`)
+
+          .setDescription(`Nom du Serveur: ${guild.name}`)
+
+          .addField("Propriétaire:", `${guild.owner}`, true)
+
+          .addField("ID du Serveur:", `${guild.id}`, true)
+
+          .addField("Région:", `${guild.region}`, true)
+
+          .addField("Niveau de Vérification:", `${guild.verificationLevel}`, true)
+
+          .addField("Nombre de Chaînes Vocaux:", `${voicechannels.size}`, true)
+
+          .addField("Nombre de Chaînes Textuels:", `${textchannels.size}`, true)
+
+          .addField("Nombre de Membres:", `${members}`, true)
+
+          .addField("Nombre de Bots:", `${bots}`, true)
+
+          .addField("Nombre d'Humains:", `${humans}`, true)
+
+          .addField("Nombre de Rôles:", `${guild.roles.size}`, true)
+
+          .addField(`Nombre d'emojis: (${guild.emojis.size})`, `- ${guild.emojis.array()}`, true)
+
+          .setFooter(`Date de création: ${guild.createdAt}`)
+
+ 
+          
+message.reply('membercount');
+
+};
     
     if (command == "help") {
         var embedhelpmember = new Discord.RichEmbed()
