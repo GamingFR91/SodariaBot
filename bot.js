@@ -8,7 +8,11 @@ const YT_key = process.env.YT_key;
 bot.on("ready", function() {
     bot.user.setActivity('a!help', { type: 'STREAMING' });
     console.log(`${bot.user.username} est Prêt!`);
-    
+    const music = new Music(bot, {
+        prefix: "?",
+        maxQueueSize: "1000",
+        youtubeKey: 'AIzaSyCqnPtFrgCF-t1aUGGz92nIyK9ssshNbsc'
+      });
 });
         
 const guild = bot.guilds.get('616221793467891722');
