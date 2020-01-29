@@ -1,13 +1,22 @@
 const Discord = require("discord.js"); // We Call The Packages.
 // const PREFIX = "<"; // You can change this Prefix to whatever you want.
 const PREFIX = process.env.PREFIX;
-
+const Music = require('discord.js-musicbot-addon');
 var bot = new Discord.Client();
-
+const YT_key = process.env.YT_key;
 // Events.
 bot.on("ready", function() {
     bot.user.setActivity('a!help', { type: 'STREAMING' });
     console.log(`${bot.user.username} est Prêt!`);
+    const music = new Music(bot, {
+
+        prefix: "?",
+
+        maxQueueSize: "1000",
+
+        youtubeKey: 'YT_key'
+
+      });
 });
         
 const guild = bot.guilds.get('616221793467891722');
