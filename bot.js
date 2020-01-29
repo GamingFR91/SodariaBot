@@ -55,7 +55,7 @@ let guild = message.guild
 
         let voicechannels = guild.channels.filter(e => e.type === "voice")
 
-          var embed = new Discord.RichEmbed()
+          var membercount = new Discord.RichEmbed()
 
           .setColor(0xFF0011)
 
@@ -83,7 +83,7 @@ let guild = message.guild
 
           .addField("Nombre de Rôles:", `${guild.roles.size}`, true)
 
-          .addField(`Nombre d'emojis: (${guild.emojis.size})`, `- ${guild.emojis.array()}`, true)
+          .addField(`Nombre d'emojis: (${guild.emojis.size})`, `- ${guild.emojis.array()}`, true);
 
           .setFooter(`Date de création: ${guild.createdAt}`)
 
