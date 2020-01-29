@@ -89,7 +89,7 @@ let guild = message.guild
 
  
           
-message.reply('membercount');
+message.channel.send('membercount');
 
 };
     
