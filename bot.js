@@ -8,15 +8,7 @@ const YT_key = process.env.YT_key;
 bot.on("ready", function() {
     bot.user.setActivity('a!help', { type: 'STREAMING' });
     console.log(`${bot.user.username} est Prêt!`);
-    const music = new Music(bot, {
-
-        prefix: "?",
-
-        maxQueueSize: "1000",
-
-        youtubeKey: 'YT_key'
-
-      });
+    
 });
         
 const guild = bot.guilds.get('616221793467891722');
@@ -65,7 +57,7 @@ let guild = message.guild
 
           var embed = new Discord.RichEmbed()
 
-          .setColor("#000000")
+          .setColor(0xFF0011)
 
           .setTitle(`Informations du Serveur`)
 
