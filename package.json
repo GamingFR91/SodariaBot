@@ -11,6 +11,17 @@
   "dependencies": {
     "discord.js": "^11.3.2",
     "node-fetch": "^2.1.1",
-    "minecraft-query": "^1.0.9"
+    "minecraft-query": "^1.0.9",
+    "node-opus": "^0.2.7",
+
+    "npm": "^5.8.0",
+    
+    "opusscript": "0.0.6",
+
+    "youtube-audio-stream": "^0.2.0",
+
+    "youtube-dl": "^1.12.2",
+
+    "ytdl-core": "^0.20.2"
   }
 }
