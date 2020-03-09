@@ -26,19 +26,11 @@ bot.on("ready", function() {
                 }
     
             }, 10 * 1000);
-        } 
-    })
+        
+    
 });
     
-    console.log(`${bot.user.username} est Prêt!`);
     
-    
-    const music = new Music(bot, {
-        prefix: "?",
-        maxQueueSize: "1000",
-        youtubeKey: 'AIzaSyCqnPtFrgCF-t1aUGGz92nIyK9ssshNbsc'
-      });
-});
         
 const guild = bot.guilds.get('616221793467891722');
 
