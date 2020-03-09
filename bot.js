@@ -5,9 +5,34 @@ const Music = require('discord.js-musicbot-addon');
 var bot = new Discord.Client();
 const YT_key = process.env.YT_key;
 // Events.
-bot.on("ready", function() {
-    bot.user.setActivity('a!help', { type: 'STREAMING' });
+bot.on("ready", function() { 
+    let rotate
+            setInterval(function(){
+    
+                if(rotate === 0){
+                    client.user.setActivity('Nenorium | Network MCPE', {type: "STREAMING", url: 'https://www.twitch.tv/discordapp'});
+                    rotate = 1;       
+                }
+    
+                else if(rotate === 1){
+                    client.user.setActivity('nenorium.tk | 💎', {type: "STREAMING", url: 'https://www.twitch.tv/discordapp'});
+                    rotate = 2;
+                }
+    
+                else if(rotate === 2){
+                    client.user.setActivity(message.guild.memberCount + " utilisateurs sur notre discord !", {type: "STREAMING", url: 'https://www.twitch.tv/discordapp'});
+                    rotate = 0;
+                    
+                }
+    
+            }, 10 * 1000);
+        } 
+    })
+});
+    
     console.log(`${bot.user.username} est Prêt!`);
+    
+    
     const music = new Music(bot, {
         prefix: "?",
         maxQueueSize: "1000",
