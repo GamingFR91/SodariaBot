@@ -6,7 +6,7 @@ var bot = new Discord.Client();
 const YT_key = process.env.YT_key;
 // Events.
 bot.on("ready", function() { 
-    let rotate
+    let rotate = 0;
             setInterval(function(){
     
                 if(rotate === 0){
