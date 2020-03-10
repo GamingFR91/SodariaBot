@@ -228,6 +228,9 @@ bot.on("message", function(message) {
         
         if(!message.member.voiceChannel) return message.channel.send("Vous devez être dans un Salon Vocal pour pouvoir utiliser cette commande");
         
+        if(message.guild.bot.VoiceChannel) return message.channel.send("Je suis déjà dans un salon Vocal");
+        
+        if(!args[0]) return message.channel.send("Merci de mettre un lien pour que je puisse mettre votre Musique");
        };
 
 });
