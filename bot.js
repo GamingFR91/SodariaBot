@@ -236,7 +236,13 @@ bot.on("message", function(message) {
         
         if (!validURL) return message.channel.send("Veuillez mettre un lien valide");
         
+        let info = ytdl.getInfo(args[1]);
         
+        let connect = await message.member.voiceChannel().join;
+        
+        let dispatcher = await connect.play(ytdl(args[1], { filter: 'audioonly' }));
+        
+        message.channel.send("Maintenant Je Joue: " + info.title);
         
        };
 
