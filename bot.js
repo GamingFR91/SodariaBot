@@ -230,7 +230,14 @@ bot.on("message", function(message) {
         
         if(message.guild.bot.VoiceChannel) return message.channel.send("Je suis déjà dans un salon Vocal");
         
-        if(!args[0]) return message.channel.send("Merci de mettre un lien pour que je puisse mettre votre Musique");
+        if(!args[1]) return message.channel.send("Merci de mettre un lien pour que je puisse mettre votre Musique");
+        
+        let validURL = await ytdl.validateURL(args[1]);
+        
+        if (!validURL) return message.channel.send("Veuillez mettre un lien valide");
+        
+        
+        
        };
 
 });
