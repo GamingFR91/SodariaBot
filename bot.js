@@ -3,7 +3,7 @@ const Discord = require("discord.js"); // We Call The Packages.
 const PREFIX = process.env.PREFIX;
 const Query = require("minecraft-query");
 const ytdl = require("ytdl-core");
-const 
+
 
 
 var bot = new Discord.Client();
@@ -221,6 +221,12 @@ bot.on("message", function(message) {
          s.react('❌');
 
         })
+        
+       };
+    
+    if(command == play){
+        
+        if(!message.member.voiceChannel) return message.channel.send("Vous devez être dans un Salon Vocal pour pouvoir utiliser cette commande");
         
        };
 
